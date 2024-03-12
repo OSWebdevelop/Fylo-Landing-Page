@@ -18,12 +18,14 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  scroll-padding-top: 4rem;
+  /* scroll-padding-top: 4rem; */
 }
 a{
   color: inherit;
 }
 body{
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -72,8 +74,13 @@ nav{
   border: 1px solid black;
   border-radius: 5px;
 }
+/* call to action */
 .cta-container input::placeholder{
   color: var(--neutral-light-gray);
+}
+.cta-container input:invalid, .signup-right input:invalid{
+  border: 3px solid red;
+  transition: 0.02s linear;
 }
 .cta-btn{
   padding: 9px 50px;
@@ -148,12 +155,13 @@ nav{
 .signup-right input::placeholder{
   color: var(--neutral-light-gray);
 }
-.signup-right a{
+.signup-btn{
   background-color: var(--accent-bright-blue);
-  padding: 10px 50px;
+  padding: 10px 30px;
   border-radius: 5px;
   color: #fff;
   font-weight: 500;
+  box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
 }
 /* footer */
 .site-footer{
@@ -163,8 +171,8 @@ nav{
   padding: 100px 50px;
   color: #fff;
 }
-.site-footer .logo-container img{
-  color: #fff;
+.test{
+  fill: #fff;
   margin-bottom: 20px;
 }
 .footer-content{
@@ -189,4 +197,65 @@ nav{
 /* Variations */
 .header-white, .paragraph-white{
   color: var(--neutral-light-gray-blue);
+}
+/* active variations */
+.cta-btn:hover{
+  opacity: 70%;
+  cursor: pointer;
+  transition: 0.02s linear;
+}
+.signup-btn:hover{
+  background-color: hsl(224, 100%, 67%);
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: 0.02s linear;
+}
+.footer-links li:hover, .social-icons i:hover{
+  color: var(--primary-desatuarted-blue);
+  cursor: pointer;
+  transition: 0.02s linear;
+}
+
+@media(max-width:1245px){
+  body{
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navlogo{
+    width: 100px;
+    margin-right: 100px;
+  }
+  .cta-container, .landing-section, .features-section,.feature-link,.signup-section, .signup-right, .site-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .landing-container, .features-container, .signup-left,.signup-right{
+    width: 400px;
+    text-align: center;
+  }
+  .landing-section{
+    width: 400px;
+    transition: 0.02s linear;
+    padding: 0px 50px;
+  }
+  .cta-container input, .cta-container a, .signup-btn, .signup-right input{
+    width: 80%;
+  }
+  .cta-container a{
+    text-align: center;
+  }
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .social-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
 }
