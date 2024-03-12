@@ -130,9 +130,33 @@ nav{
 .signup-section{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--primary-desatuarted-blue);
   padding: 100px 50px;
 }
+.signup-right{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-content: center;
+}
+.signup-right input{
+  padding: 10px 100px;
+  border-radius: 5px;
+  border: none;
+}
+.signup-right input::placeholder{
+  color: var(--neutral-light-gray);
+}
+.signup-right a{
+  background-color: var(--accent-bright-blue);
+  padding: 10px 50px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+/* footer */
+
 /* Variations */
 .header-white, .paragraph-white{
   color: var(--neutral-light-gray-blue);
