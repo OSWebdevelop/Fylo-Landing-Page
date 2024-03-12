@@ -156,7 +156,36 @@ nav{
   font-weight: 500;
 }
 /* footer */
-
+.site-footer{
+  background-color: var(--primary-dark-blue);
+  display: flex;
+  flex-direction: column;
+  padding: 100px 50px;
+  color: #fff;
+}
+.site-footer .logo-container img{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.footer-content img{
+  margin-right: 10px;
+}
+.footer-links{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.social-icons i{
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 10px;
+}
 /* Variations */
 .header-white, .paragraph-white{
   color: var(--neutral-light-gray-blue);
